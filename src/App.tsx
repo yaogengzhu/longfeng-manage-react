@@ -1,23 +1,21 @@
 import React from 'react'
-import { Layout, Button} from 'antd'
 
-const { Header, Content, Sider } = Layout
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom"
+
+import Main from './view/main/main'
 
 
 const App: React.FC = () => {
   return (
-    <div className="App" style={{width: '100%', height: '100%'}}>
-		<Layout>
-			<Layout>
-			<Header>Header</Header>
-			<Layout>
-				<Sider>Sider</Sider>
-				<Content>
-					<Button type='primary'>测试</Button>
-				</Content>
-			</Layout>
-			</Layout>
-		</Layout>
+    <div className="App">
+		<Router>
+			<Route path='/' component={ Main }></Route>
+		</Router>
     </div>
   );
 }
