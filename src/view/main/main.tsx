@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Layout, Button} from 'antd'
+import HeaderComp from './header/header-comp'
 
 const { Header, Content, Sider } = Layout
 
@@ -15,11 +16,13 @@ export default class Main extends React.Component{
            <div style={{width: '100%', height: '100%'}}>
                <Layout>
                     <Layout>
-                    <Header>Header</Header>
+                    <Header>
+                        <HeaderComp></HeaderComp>
+                    </Header>
                     <Layout>
                         <Sider>Sider</Sider>
                         <Content>
-                            <Button type='primary'>测试</Button>
+                           
                         </Content>
                     </Layout>
                     </Layout>

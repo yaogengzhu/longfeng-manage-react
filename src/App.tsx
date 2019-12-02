@@ -12,7 +12,7 @@ import Main from './view/main/main'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="App" style={{height: '100%'}}>
 		<Router>
 			<Route path='/' component={ Main }></Route>
 		</Router>

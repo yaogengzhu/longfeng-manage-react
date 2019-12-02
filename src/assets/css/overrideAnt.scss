@@ -1,9 +1,13 @@
 .nt-layout, .ant-layout {
     height: 100%;
+    line-height: 0;
 }
 
 .ant-layout-header {
     background-color: #fff;
+    // height: 63px;
+    line-height: normal;
+    padding: 0;
 }
 
 .ant-layout-sider {
