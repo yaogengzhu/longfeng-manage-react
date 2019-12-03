@@ -1,3 +1,41 @@
 # longfeng-manage
 
-## 配置主题色
+### 开发过程中，可能会遇到的问题 
+- 如果遇到主题配置不成功的问题怎么办？ 可以参考以下方案 
+> 新建一个config-overrides.js 文件
+```js
+const path = require('path')
+const { fixBabelImports, addLessLoader, addWebpackAlias} = require('customize-cra')
+const rewireCssModules = require("react-app-rewire-css-modules")
+// const them = require('./src/them')
+// module.exports = override(
+//     fixBabelImports('import', {
+//       libraryName: 'antd',
+//       libraryDirectory: 'es',
+//      style: true,
+//     }),
+//     addLessLoader({
+//     javascriptEnabled: true,
+//     modifyVars: { '@primary-color': '#1DA57A' },
+//   }),
+// )
+
+module.exports = function override(config, env) {
+    config.output.publicPath = './'
+    config = addWebpackAlias({
+        "@": path.resolve(__dirname, "src")
+    })(config)
+    config = rewireCssModules(config, env)
+
+    config = fixBabelImports('import', {
+        libraryName: 'antd',
+        style: true
+    })(config)
+
+    addLessLoader({
+        javascriptEnabled: true,
+        modifyVars: { '@primary-color': '#1DA57A', '@brand-primary': '#1DA57A' }
+    })(config, env)
+    return config
+}
+```

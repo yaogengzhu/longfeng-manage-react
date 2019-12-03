@@ -4,17 +4,22 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    Redirect,
+    RouteComponentProps
   } from "react-router-dom"
 
 import Main from './view/main/main'
+import Login from './view/login/login';
 
 
 const App: React.FC = () => {
   return (
     <div className="App" style={{height: '100%'}}>
 		<Router>
-			<Route path='/' component={ Main }></Route>
+			<Route path='/main' component={ Main }></Route>
+      <Route path='/login' exat component={ Login}></Route>
+      <Redirect from='/main' to='/main' ></Redirect>
 		</Router>
     </div>
   );
