@@ -19,7 +19,6 @@ const App: React.FC = () => {
 		<Router>
 			<Route path='/main' component={ Main }></Route>
       <Route path='/login' exat component={ Login}></Route>
-      <Redirect from='/main' to='/main' ></Redirect>
 		</Router>
     </div>
   );
