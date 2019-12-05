@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { Layout, Button} from 'antd'
-import HeaderComp from './header/header-comp'
+import HeaderComp from './header-comp/header-comp'
+import SilderComp from './slider-comp/slider-comp'
 
 const { Header, Content, Sider } = Layout
 
@@ -20,7 +21,9 @@ export default class Main extends React.Component{
                         <HeaderComp></HeaderComp>
                     </Header>
                     <Layout>
-                        <Sider>Sider</Sider>
+                        <Sider>
+                            <SilderComp></SilderComp>
+                        </Sider>
                         <Content>
                            
                         </Content>
