@@ -11,7 +11,7 @@ export default class Login extends React.Component {
     public render() {
         return(
             <div className='login'>
-                <h1>龙风仓库管理系统</h1>
+                <h1>禅道</h1>
                 <div className='login-box'>
                     <Input size='large' placeholder='请输入账号'></Input>
                     <Input size='large' placeholder='请输入密码'></Input>
