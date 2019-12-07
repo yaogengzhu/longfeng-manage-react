@@ -21,11 +21,7 @@ export default class Main extends React.Component{
                         <HeaderComp></HeaderComp>
                     </Header>
                     <Layout>
-                        <Sider>
-                            <SilderComp></SilderComp>
-                        </Sider>
                         <Content>
-                           
                         </Content>
                     </Layout>
                     </Layout>
