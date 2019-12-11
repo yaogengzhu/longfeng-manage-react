@@ -3,9 +3,10 @@ import React from 'react'
 import { Layout} from 'antd'
 import HeaderComp from './header-comp/header-comp'
 import { Route, RouteComponentProps, Redirect, Switch, Router } from 'react-router'
-import HomeCenter from '../home-plate/router'
+// import HomeCenter from '../home-plate/router'
+import Home from '../home-plate/home/home'
 
-const { Header, Content, Sider } = Layout
+const { Header, Content} = Layout
 
 export default class Main extends React.Component<RouteComponentProps>{
     constructor(props: any) {
@@ -27,10 +28,9 @@ export default class Main extends React.Component<RouteComponentProps>{
                         </Header>
                         <Layout>
                             <Content>
-                                    {/* <Switch>
-                                        <Route path={ this.props.match.path + '/my' } component={ HomeCenter}></Route>
-                                    </Switch> */}
-                                    <div>呃呃呃呃</div>
+                                <Switch>
+                                    <Route path={'/main/home' } component={ Home}></Route>
+                                </Switch>
                             </Content>
                         </Layout>
                         </Layout>
