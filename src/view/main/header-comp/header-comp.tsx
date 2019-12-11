@@ -1,6 +1,5 @@
 import React from 'react' 
 import './header-comp.scss'
-import Inconfont from '../../../components/inconfont/inconfont'
 import { NavLink } from 'react-router-dom'
 
 

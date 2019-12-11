@@ -16,11 +16,14 @@ import Login from './view/login/login';
 const App: React.FC = () => {
   return (
     <div className="App" style={{height: '100%'}}>
-		<Router>
-			<Route exact path='/main' component={ Main }></Route>
-      <Route path='/login' exat component={ Login}></Route>
-      <Redirect to='/main' ></Redirect>
-		</Router>
+      <Router>
+        <Route exact path='/main' component={ Main }></Route>
+        <Route path='/login' exat component={ Login}></Route>
+        <Route exact path="/">
+          <Redirect to='/main'></Redirect>
+        {/* {loggedIn ? <Redirect to="/dashboard" /> : <PublicHomePage />} */}
+      </Route>
+      </Router>
     </div>
   );
 }
