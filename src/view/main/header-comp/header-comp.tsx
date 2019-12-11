@@ -27,7 +27,7 @@ export default class HeaderComp extends React.Component<{}, IState> {
                 <div className="header-center">
                     <div className="center-left">
                         <NavLink className='span' to='/main/my'>我的地盘</NavLink>
-                        <NavLink className='span' to='/product'>产品</NavLink>
+                        <NavLink className='span' to='/main/product'>产品</NavLink>
                         <NavLink className='span' to='/project'>项目</NavLink>
                         <NavLink className='span' to='/test'>测试</NavLink>
                     </div>

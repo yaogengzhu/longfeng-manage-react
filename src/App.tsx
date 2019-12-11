@@ -17,8 +17,9 @@ const App: React.FC = () => {
   return (
     <div className="App" style={{height: '100%'}}>
 		<Router>
-			<Route path='/main' component={ Main }></Route>
+			<Route exact path='/main' component={ Main }></Route>
       <Route path='/login' exat component={ Login}></Route>
+      <Redirect to='/main' ></Redirect>
 		</Router>
     </div>
   );
