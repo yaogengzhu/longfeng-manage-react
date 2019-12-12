@@ -8,7 +8,7 @@ class Home extends React.Component {
 
     public render() {
         return(
-            <div>测试分支</div>
+            <div>我的地盘</div>
         )
     }
 }

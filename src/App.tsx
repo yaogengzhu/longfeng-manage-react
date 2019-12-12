@@ -19,7 +19,7 @@ const App: React.FC = () => {
 		<div className="App" style={{ height: '100%' }}>
 			<HashRouter>
 				<Switch>
-					<Route exact path='/main' component={Main}></Route>
+					<Route path='/main' component={Main}></Route>
 					<Route path='/login' exat component={Login}></Route>
 					<Route exact path="/">
 						<Redirect to='/main'></Redirect>
