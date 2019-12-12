@@ -25,24 +25,24 @@ export default class HeaderComp extends React.Component<{}, IState> {
                 </div>
                 <div className="header-center">
                     <div className="center-left">
-                        <NavLink className='span' to='/main/homeCenter/home'>我的地盘</NavLink>
-                        <NavLink className='span' to='/main/productCenter'>产品</NavLink>
-                        <NavLink className='span' to='/main/projectCenter'>项目</NavLink>
-                        <NavLink className='span' to='/main/testCenter'>测试</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/homeCenter/home'>我的地盘</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/productCenter'>产品</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/projectCenter'>项目</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/testCenter'>测试</NavLink>
                     </div>
                     <div className="center-line"></div>
                     <div className="center-center">
-                        <NavLink  className='span' to='/main/codeCenter'>代码</NavLink>
-                        <NavLink  className='span' to='/main/operationCenter'>运维</NavLink>
-                        <NavLink  className='span' to='/main/officeCenter'>办公</NavLink>
-                        <NavLink  className='span' to='/main/ticklingCenter'>反馈</NavLink>
-                        <NavLink  className='span' to='/main/wordCenter'>文档</NavLink>
-                        <NavLink  className='span' to='/main/statisticsCenter'>统计</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/codeCenter'>代码</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/operationCenter'>运维</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/officeCenter'>办公</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/ticklingCenter'>反馈</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/wordCenter'>文档</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/statisticsCenter'>统计</NavLink>
                     </div>
                     <div className="center-line"></div>
                     <div className="center-right">
-                        <NavLink  className='span' to='/main/organizationCenter'>组织</NavLink>
-                        <NavLink  className='span' to='/main/backstageCenter'>后台</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/organizationCenter'>组织</NavLink>
+                        <NavLink activeClassName='selected' className='span' to='/main/backstageCenter'>后台</NavLink>
                     </div>
                 </div>
                 <div className="header-right"></div>
