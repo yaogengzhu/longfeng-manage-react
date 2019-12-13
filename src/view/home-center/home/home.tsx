@@ -1,6 +1,8 @@
 import React from 'react'
 import './home.scss'
 import SubNav from '../../../components/sub-nav/sub-nav'
+import { Switch, Route, Redirect } from 'react-router'
+import HomePageRouter from './router'
 
 class Home extends React.Component {
     constructor(props: any) {
@@ -16,7 +18,7 @@ class Home extends React.Component {
                         <SubNav title='首页' to='/main/homeCenter/home/homePage'></SubNav>
                     </li>
                     <li>
-                        <SubNav title='日程' to='/main/homeCenter/home/Schedule'></SubNav>
+                        <SubNav title='日程' to='/main/homeCenter/home/schedule'></SubNav>
                     </li>
                     <li className='line'></li>
                     <li>
@@ -57,9 +59,16 @@ class Home extends React.Component {
     }
 
     public render() {
+        const props = this.props as any
+        console.log(props.match.path)
         return (
             <div className='home'>
                 {this.renderNav()}
+                <div className='home-main'>
+                    <Switch>
+                        <Route to={ props.match.path + '/home'} component={ HomePageRouter }></Route>
+                    </Switch>
+                </div>
             </div>
         )
     }

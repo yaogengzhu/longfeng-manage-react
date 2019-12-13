@@ -1,17 +1,17 @@
 import React from 'react'
-import './home-page.scss'
 
-class HomePage extends React.Component {
+class Schedule extends React.Component {
     constructor(props: any) {
         super(props)
         this.state = {}
     }
+    
 
     public render() {
         return (
-            <div className='homePage'>特使</div>
+            <div>日程板块</div>
         )
     }
 }
 
-export default HomePage
+export default Schedule
