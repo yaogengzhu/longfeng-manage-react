@@ -66,7 +66,7 @@ class Home extends React.Component {
                 {this.renderNav()}
                 <div className='home-main'>
                     <Switch>
-                        <Route to={ props.match.path + '/home'} component={ HomePageRouter }></Route>
+                        <Route to={ props.match.path + '/homePage'} component={ HomePageRouter }></Route>
                     </Switch>
                 </div>
             </div>
