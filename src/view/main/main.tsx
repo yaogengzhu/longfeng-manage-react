@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Layout} from 'antd'
 import HeaderComp from './header-comp/header-comp'
-import { Route, RouteComponentProps, Redirect, Switch } from 'react-router'
-import HomeCenter from '../home-plate/router'
+import { Route, RouteComponentProps, Redirect, Switch, Router } from 'react-router-dom'
+import HomeCenter from '../home-center/router'
 
-const { Header, Content, Sider } = Layout
+const { Header, Content} = Layout
 
 export default class Main extends React.Component<RouteComponentProps>{
     constructor(props: any) {
@@ -13,33 +13,24 @@ export default class Main extends React.Component<RouteComponentProps>{
         this.state = {}
     }
 
-    public componentDidMount() {
-        console.log(this.props.match.path)
-    }
-
     public render() {
         return(
-           <div style={{width: '100%', height: '100%'}}>
-               <Layout>
+                <div style={{width: '100%', height: '100%'}}>
                     <Layout>
-                    <Header>
-                        <HeaderComp></HeaderComp>
-                    </Header>
-                    <Layout>
-                        <Content>
-                            <Switch>
-                                <Route path={ this.props.match.path + '/homeCenter' } component={ HomeCenter}></Route>
-                                {/* <Route path={ this.props.match.path + '/goodsCenter' } ></Route>
-                                <Route path={ this.props.match.path + '/orderForm' }></Route>
-                                <Route path={ this.props.match.path + '/configuration' }></Route>
-                                <Route path={ this.props.match.path + '/staffCenter'}></Route> */}
-                                {/* <Redirect from={ this.props.match.path } to={ this.props.match.path + "/dataCenter" } /> */}
-                            </Switch>
-                        </Content>
-                    </Layout>
-                    </Layout>
-                </Layout>
-           </div>
+                            <Layout>
+                            <Header>
+                                <HeaderComp></HeaderComp>
+                            </Header>
+                            <Layout>
+                                <Content>
+                                    <Switch>
+                                        <Route path={ this.props.match.path + '/homeCenter' } component={ HomeCenter}></Route>
+                                    </Switch>
+                                </Content>
+                            </Layout>
+                            </Layout>
+                        </Layout>
+                </div>
         )
     }
 } 
