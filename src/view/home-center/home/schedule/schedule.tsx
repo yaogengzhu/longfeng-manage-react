@@ -1,16 +1,17 @@
 import React from 'react'
 
-class Home extends React.Component {
+class Schedule extends React.Component {
     constructor(props: any) {
         super(props)
         this.state = {}
     }
+    
 
     public render() {
-        return(
-            <div>测试分支</div>
+        return (
+            <div>日程板块</div>
         )
     }
 }
 
-export default Home
+export default Schedule

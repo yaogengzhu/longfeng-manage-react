@@ -4,11 +4,10 @@ import { RouteComponentProps, Switch, Route, Redirect } from 'react-router'
 import Home from './home/home'
 
 function Router(props: RouteComponentProps) {
-    console.log(props.match.path)
     return (
         <Switch>
             <Route path={ props.match.path + '/home'} component={ Home }></Route>
-            <Redirect to={ props.match.path + "/home" } />
+            {/* <Redirect to={ props.match.path + "/home" } /> */}
         </Switch>
     )
 }
