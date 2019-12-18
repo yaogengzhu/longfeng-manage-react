@@ -9,8 +9,9 @@ function Router(props: RouteComponentProps) {
     return (
         <div>
             <Switch>
-                <Route to={props.match.path + '/homePage'} component={ HomePage }></Route>
-                <Route to={props.match.path + '/schedule'} component={ Schedule }></Route>
+                <Route path={props.match.path + '/homePage'} component={ HomePage }></Route>
+                <Route path={props.match.path + '/schedule'} component={ Schedule }></Route>
+                <Redirect to={ props.match.path + '/homePage' }></Redirect>
             </Switch>
         </div>
     )

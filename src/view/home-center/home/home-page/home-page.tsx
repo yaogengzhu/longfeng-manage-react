@@ -9,7 +9,9 @@ class HomePage extends React.Component {
 
     public render() {
         return (
-            <div className='homePage'>特使</div>
+            <div className='main'>
+                <div className='homePage'>2222</div>
+            </div>
         )
     }
 }
