@@ -1,27 +1,24 @@
 import React from 'react'
-import { Input, Button } from 'antd'
-import './login.scss'
+import withStyle, { WithStyles } from 'react-jss'
 
-export default class Login extends React.Component {
-    constructor(props: any) {
-        super(props)
-        this.state = {}
+const styles = {
+    loginContainer: {
+        background: ''
     }
+}
 
+interface IProps extends WithStyles<typeof styles> {
+
+}
+
+class Login extends React.Component<IProps, {}> {
+   
     public render() {
-        return(
-            <div className='login'>
-                <h1>禅道</h1>
-                <div className='login-box'>
-                    <Input size='large' placeholder='请输入账号'></Input>
-                    <Input size='large' placeholder='请输入密码'></Input>
-                    <p>
-                        <span>注册</span>
-                        <span>忘记密码</span>
-                    </p>
-                    <Button type='primary' size='large'>登录</Button>
-                </div>
-            </div>
+        const classes = this.props.classes
+        return (
+            <div className={['column' ,classes.loginContainer,].join(' ')}>测试登录</div>
         )
     }
 }
+
+export default withStyle(styles)(Login)

@@ -1,5 +1,16 @@
 # longfeng-manage
 
+### 本项目技能要求 
+- react
+- typescript
+- jss
+- mobx
+- scss
+
+### 开发前准备
+- 需要安装 react tyscript jss mobx 
+- 可以使用react create-app 构建一个脚手架
+
 ### 开发过程中，可能会遇到的问题 
 - 如果遇到主题配置不成功的问题怎么办？ 可以参考以下方案 
 > 新建一个config-overrides.js 文件

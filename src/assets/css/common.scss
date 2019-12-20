@@ -1,13 +1,279 @@
-#root {
+html, body, #root, .App {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    min-width: 1300px;
-}
-
-.icon {
+  }
+  
+  #root {
+      position: relative;
+      z-index: 1;
+  }
+  
+  *[hidden] {
+      display: none !important;
+  }
+  
+  .icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
- }
+  }
+  
+  .anchorBL {
+      display: none;
+  }
+  
+  input, button {
+    outline: none;
+  }
+  
+  /* 文本超长 */
+  .text-popper {
+    display: inline-block !important;
+    width: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  // .text-ellipsis-two {
+  //     /* autoprefixer: ignore next */
+  //     display: -webkit-box;
+  //     /* autoprefixer: ignore next */
+  //     -webkit-box-orient: vertical;
+  //     /* autoprefixer: ignore next */
+  //     -webkit-line-clamp: 2;
+  //     overflow: hidden;
+  //     /* autoprefixer: off */
+  //     /* autoprefixer: ignore next */
+  //     -webkit-box-orient: vertical;
+  //     /* autoprefixer: on */
+  // }
+  
+  .text-ellipsis {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+  }
+  
+  .absolute-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .avatar-border-style-0 {
+    border: 1px solid #999;
+  }
+  
+  .avatar-border-style-1 {
+    border: 1px solid #3c90ff;
+  }
+  
+  .avatar-border-style-2 {
+    border: 1px solid #ee5b5b;
+  }
+  
+  input[type=date]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  // 增加全局常用的flex布局
+  
+  .row {
+      display: flex;
+      height: 100%;
+  }
+  
+  .align-items-center {
+      align-items: center;
+  }
+  
+  .justify-content-center {
+      justify-content: center;
+  }
+  
+  .justify-content-flex-end {
+      justify-content: flex-end;
+  }
+  
+  .align-items-flex-end {
+      align-items: flex-end;
+  }
+  
+  .space-around {
+      justify-content: space-around;
+  }
+  
+  .space-between {
+      justify-content: space-between;
+  }
+  
+  .column {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+  
+  .expaned {
+      flex: 1;
+  }
+  
+  .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+  
+  .overflow-hidden {
+      overflow: hidden;
+  }
+  
+  .overflow-auto {
+      overflow: auto;
+  }
+  
+  .text-align-left {
+    text-align: left;
+  }
+  
+  .text-align-right {
+    text-align: right;
+  }
+  
+  .text-align-center {
+    text-align: center;
+  }
+  
+  .color-primary-light {
+      color: #14cc9b;
+  }
+  
+  .color-primary-dark {
+      color: #11CBA7;
+  }
+  
+  .color-danger-light {
+      color: #ff6565;
+  }
+  
+  .color-danger-dark {
+      color: #ffa5a5;
+  }
+  
+  .color-333 {
+    color: #333 !important;
+  }
+  
+  .color-666 {
+    color: #666;
+  }
+  
+  .color-999 {
+    color: #999;
+  }
+  
+  .color-ccc {
+    color: #ccc;
+  }
+  
+  .color-ddd {
+    color: #ddd;
+  }
+  
+  .color-000 {
+    color: #000;
+  }
+  
+  .color-fff {
+      color: #fff;
+  }
+  
+  @for $i from 12 to 41 {
+      .font-size-#{$i} {
+          font-size: #{$i}px;
+      }
+  }
+  
+  .font-weight-600 {
+      font-weight: 600;
+  }
+  
+  @for $i from 1 to 51 {
+      .margin-left-#{$i} {
+          margin-left: #{$i}px;
+      }
+  
+      .margin-top-#{$i} {
+          margin-top: #{$i}px;
+      }
+  
+      .margin-right-#{$i} {
+          margin-right: #{$i}px;
+      }
+  
+      .margin-bottom-#{$i} {
+          margin-bottom: #{$i}px;
+      }
+  
+      .padding-left-#{$i} {
+          padding-left: #{$i}px;
+      }
+  
+      .padding-top-#{$i} {
+          padding-top: #{$i}px;
+      }
+  
+      .padding-right-#{$i} {
+          padding-right: #{$i}px;
+      }
+  
+      .padding-bottom-#{$i} {
+          padding-bottom: #{$i}px;
+      }
+  
+      .margin-#{$i} {
+          margin: #{$i}px;
+      }
+  
+      .padding-#{$i} {
+          padding: #{$i}px;
+      }
+  
+      .line-height-#{$i} {
+          line-height: #{$i}px;
+      }
+  }
+  
+  @for $i from 1 to 150 {
+      .width-#{$i} {
+          width: #{$i}px;
+      }
+  
+      .height-#{$i} {
+          height: #{$i}px;
+      }
+  }
+  
+  .border-radius-10 {
+      border-radius: 10px;
+  }
+  
+  .border-radius-20 {
+      border-radius: 20px;
+  }
+  
+  .border-radius-5 {
+      border-radius: 5px;
+  }
+  
+  .border-radius-50p {
+      border-radius: 50%;
+  }
