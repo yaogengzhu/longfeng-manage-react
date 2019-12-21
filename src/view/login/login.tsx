@@ -1,9 +1,20 @@
 import React from 'react'
 import withStyle, { WithStyles } from 'react-jss'
+import { Input, Button, Checkbox } from 'antd'
+import bg from '@/assets/images/bg.jpg'
+import { Iconfont } from '../../components/icon-font/icon-font'
 
 const styles = {
     loginContainer: {
-        background: ''
+        background: `url(${bg}) center center no-repeat`,
+
+        '& .box': {
+            marginTop: '20px',
+            width: '480px',
+            height: '380px',
+            padding: '30px 40px',
+            background: "rgba(255, 255, 255 ,0.9)"
+        },
     }
 }
 
@@ -16,7 +27,35 @@ class Login extends React.Component<IProps, {}> {
     public render() {
         const classes = this.props.classes
         return (
-            <div className={['column' ,classes.loginContainer,].join(' ')}>测试登录</div>
+            <div className={['column','align-items-center',classes.loginContainer,].join(' ')}>
+                <h1 className='font-size-40 color-fff' style={{ marginTop: '200px'}}>房屋租赁管理系统</h1>
+                <div className='box border-radius-10'>
+                    <h2 className='font-size-16 color-primary-light'>登录账号</h2>
+                    <Input size='large' placeholder='请输入账号' className='margin-top-10'></Input>
+                    <Input size='large' type='password' placeholder='请输入密码' className='margin-top-10'></Input>
+                    <div className='height-60 row align-items-center font-size-14 space-between'>
+                        <p>
+                            <Checkbox className='margin-left-5'></Checkbox>
+                            <span className='margin-left-5'>下次自动登录</span>
+                        </p>
+                        <p>
+                            <span className='padding-right-10 pointer'>忘记密码</span>|
+                            <span className='padding-left-10 pointer'>注册账号</span>
+                        </p>
+                    </div>
+                    <Button size='large' type="primary" block style={{ backgroundColor: '#1183fb'}}>登录</Button>
+                    <div className='height-50 row justify-content-center align-items-center margin-top-20 '>
+                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center'>
+                            <Iconfont name='iconQQ' size='30'></Iconfont>
+                            <span className='padding-left-10'>QQ登录</span>
+                        </div>
+                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center margin-left-40'>
+                            <Iconfont name='iconweixin' size='35'></Iconfont>
+                            <span className='padding-left-10'>微信登录</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
