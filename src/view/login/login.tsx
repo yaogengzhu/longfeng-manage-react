@@ -1,8 +1,10 @@
 import React from 'react'
 import withStyle, { WithStyles } from 'react-jss'
-import { Input, Button, Checkbox } from 'antd'
+import { Input, Button, Checkbox} from 'antd'
 import bg from '@/assets/images/bg.jpg'
 import { Iconfont } from '../../components/icon-font/icon-font'
+import { MessageType, Message } from '../../utils'
+import { $fetch } from '../../api'
 
 const styles = {
     loginContainer: {
@@ -43,13 +45,13 @@ class Login extends React.Component<IProps, {}> {
                             <span className='padding-left-10 pointer'>注册账号</span>
                         </p>
                     </div>
-                    <Button size='large' type="primary" block style={{ backgroundColor: '#1183fb'}}>登录</Button>
+                    <Button size='large' type="primary" block style={{ backgroundColor: '#1183fb'}} onClick={() => { this.login()}}>登录</Button>
                     <div className='height-50 row justify-content-center align-items-center margin-top-20 '>
-                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center'>
+                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center' onClick={() => {Message(MessageType.error, '暂不支持QQ登录', 1)}}>
                             <Iconfont name='iconQQ' size='30'></Iconfont>
                             <span className='padding-left-10'>QQ登录</span>
                         </div>
-                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center margin-left-40'>
+                        <div className='width-140 height-40 pointer row align-items-center  justify-content-center margin-left-40' onClick={() => {Message(MessageType.error, '暂不支持微信登录', 1)}}>
                             <Iconfont name='iconweixin' size='35'></Iconfont>
                             <span className='padding-left-10'>微信登录</span>
                         </div>
@@ -57,6 +59,15 @@ class Login extends React.Component<IProps, {}> {
                 </div>
             </div>
         )
+    }
+
+    private login() {
+        $fetch.post({
+            url: '/test'
+        }).then(res => {
+            console.log(res)
+        })
+        Message(MessageType.success, '登录成功', 1)
     }
 }
 
