@@ -11,6 +11,10 @@
 - 需要安装 react tyscript jss mobx 
 - 可以使用react create-app 构建一个脚手架
 
+
+### 项目采用jss (开发)
+>  欲了解更多，Google jss
+
 ### 开发过程中，可能会遇到的问题 
 - 如果遇到主题配置不成功的问题怎么办？ 可以参考以下方案 
 > 新建一个config-overrides.js 文件

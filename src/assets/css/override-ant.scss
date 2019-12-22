@@ -1,0 +1,22 @@
+.ant-layout, .ant-layout {
+    background-color: red;
+}
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+    border: none;
+}
+.ant-menu {
+    background: transparent;
+}
+
+.ant-menu-submenu > .ant-menu {
+    background-color: transparent;
+}
+
+.ant-layout-sider {
+    background-color: rgb(231, 231, 231);
+}
+
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    font-size: 20px;
+}
