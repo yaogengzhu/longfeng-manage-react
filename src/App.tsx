@@ -3,6 +3,7 @@ import { Switch, Route, HashRouter } from "react-router-dom"
 import Main from './view/main/main'
 import Login from './view/login/login'
 
+
 const App: React.FC = () => {
 
 	return (
