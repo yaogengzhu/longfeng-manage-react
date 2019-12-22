@@ -1,11 +1,12 @@
 import React from 'react'
 import withStyle, { WithStyles } from 'react-jss'
 import { Input, Button, Checkbox} from 'antd'
-import bg from '@/assets/images/bg.jpg'
+import bg from '@/assets/images/login.jpg'
 import { Iconfont } from '../../components/icon-font/icon-font'
 import { MessageType, Message } from '../../utils'
 import { $fetch } from '../../api'
-
+import { dialog } from '../../utils/dialog'
+import Register from './components/register'
 const styles = {
     loginContainer: {
         background: `url(${bg}) center center no-repeat`,
@@ -42,7 +43,7 @@ class Login extends React.Component<IProps, {}> {
                         </p>
                         <p>
                             <span className='padding-right-10 pointer'>忘记密码</span>|
-                            <span className='padding-left-10 pointer'>注册账号</span>
+                            <span className='padding-left-10 pointer' onClick={() => { dialog.showDialog(<Register></Register>)}}>注册账号</span>
                         </p>
                     </div>
                     <Button size='large' type="primary" block style={{ backgroundColor: '#1183fb'}} onClick={() => { this.login()}}>登录</Button>
