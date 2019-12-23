@@ -17,7 +17,8 @@ const rewireCssModules = require("react-app-rewire-css-modules")
 module.exports = function override(config, env) {
     config.output.publicPath = './'
     config = addWebpackAlias({
-        "@": path.resolve(__dirname, "src")
+        // eslint-disable-next-line no-useless-computed-key
+        ["@"]: path.resolve(__dirname, "src"),
     })(config)
     config = rewireCssModules(config, env)
 

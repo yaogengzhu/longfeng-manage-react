@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import '@/assets/css/index.scss'
 import * as serviceWorker from './serviceWorker'
+import jss from 'jss'
+import preset from 'jss-preset-default'
+jss.setup(preset())
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
