@@ -1,7 +1,7 @@
 import React from 'react'
 import withStyle, {WithStyles} from 'react-jss'
 import { Layout, Menu, Icon } from 'antd'
-// import { RouteComponentProps, withRouter } from 'react-router'
+import { RouteComponentProps, withRouter } from 'react-router-dom'
 // import { connect } from 'react-redux'
 const { Sider } = Layout
 const { SubMenu } = Menu
@@ -12,7 +12,7 @@ const styles = {
     }
 }
 
-interface IProps extends WithStyles<typeof styles> {
+interface IProps extends RouteComponentProps, WithStyles<typeof styles> {
 }
 
 interface IState {
@@ -40,7 +40,7 @@ class Slider extends React.Component<IProps , IState> {
                 <Layout style={{ minHeight: '100%' }}>
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <Menu  defaultSelectedKeys={['1']} mode="inline">
-                        <Menu.Item key="1" onClick={() => { console.log(this.props)}}>
+                        <Menu.Item key="1" onClick={() => { console.log(this.props.match)}}>
                             <Icon type="pie-chart" />
                             <span>房源信息</span>
                         </Menu.Item>
@@ -93,5 +93,5 @@ class Slider extends React.Component<IProps , IState> {
     }
 }
 
-export default withStyle(styles)(Slider)
+export default withStyle(styles)(withRouter(Slider))
 // export default withRouter(connect()(withStyle(styles)(Slider)))

@@ -14,6 +14,25 @@
 
 ### 项目采用jss (开发)
 >  欲了解更多，Google jss
+#### 遇到的困难
+> 使用jss时，我会发现，在withStyle包裹之后，拿不到来router ,会有这样的报错。
+
+**// ComponentType<Pick<ComponentProps & StylesProps & RouteComponentProps<any, StaticContext, any>, "data" | "header" | "currency" | "history" | "location" | "match" | "staticContext" | "operation" | "matured"> & StyledComponentProps<...>>' is not assignable to parameter of type 'ComponentClass<Pick<ComponentProps & StylesProps & RouteComponentProps<any, StaticContext, any>, "data" | "header" | "currency" | "history" | "location" | "match" | "staticContext" | "operation" | "matured"> & StyledComponentProps<...>, any> | (ComponentClass<...> & FunctionComponent<...>)'.**
+
+这个时候，很慌，尝试各种方案，都没有拿到想要的router！！ 经过一方google,找到来答案，可以参考这个连接[点我](https://stackoverflow.com/questions/58604851/typescript-error-when-using-withrouterwithstylesstylescomponentname)
+
+具体代码
+```tsx
+// 引入
+import { RouteComponentProps, withRouter } from 'react-router-dom'
+
+interface IProps extends RouteComponentProps, WithStyles<typeof styles> {
+}
+// 导出
+export default withStyle(styles)(withRouter(Slider))
+
+
+```
 
 ### 开发过程中，可能会遇到的问题 
 - 如果遇到主题配置不成功的问题怎么办？ 可以参考以下方案 
