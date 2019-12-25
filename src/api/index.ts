@@ -33,6 +33,23 @@ class Fetch {
 
         return Fetch.getData(Object.assign({ }, mainConfig, serverConfig)) as Promise<any>
     }
+    public get<T>(data: {
+        url: string,
+        params?: any
+    }): Promise<T> {
+        const serverConfig = {
+            url: data.url,
+            method: 'get',
+            // headers: {
+            //     "Authentication": shopInfoStore.token,
+            //     "ShopAuthentication": localStorage.getItem('shopId'),
+            //     "CashierSn": 123
+            // },
+            data: data.params // qs.stringify(data.params)
+        }
+
+        return Fetch.getData(Object.assign({ }, mainConfig, serverConfig)) as Promise<any>
+    }
 }
 
 const $fetch = new Fetch()

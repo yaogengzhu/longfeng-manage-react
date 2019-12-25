@@ -7,6 +7,7 @@ import { MessageType, Message } from '../../utils'
 import { $fetch } from '../../api'
 import { dialog } from '../../utils/dialog'
 import Register from './components/register'
+import axios from 'axios'
 const styles = {
     loginContainer: {
         background: `url(${bg}) center center no-repeat`,
@@ -63,12 +64,11 @@ class Login extends React.Component<IProps, {}> {
     }
 
     private login() {
-        $fetch.post({
-            url: '/test'
-        }).then(res => {
-            console.log(res)
-        })
-        Message(MessageType.success, '登录成功', 1)
+       $fetch.get({
+           url: '/default/index'
+       }).then( res => {
+           console.log(res)
+       })
     }
 }
 
