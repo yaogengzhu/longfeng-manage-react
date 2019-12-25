@@ -2,7 +2,6 @@ import React from 'react'
 import withStyle, {WithStyles} from 'react-jss'
 import { Layout, Menu, Icon } from 'antd'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
-// import { connect } from 'react-redux'
 const { Sider } = Layout
 const { SubMenu } = Menu
 
