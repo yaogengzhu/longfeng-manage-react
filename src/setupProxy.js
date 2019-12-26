@@ -5,9 +5,8 @@ module.exports = function(app) {
   app.use(
     "/api",
     proxy({
-        host: "renthousetest.yaogeng.top",
-        // target: "https://api.yaogeng.top",
-        target: "http://127.0.0.1:7002",
+        host: "http://renthousetest.yaogeng.top",
+        target: "https://api.yaogeng.top/",
         changeOrigin: true,
         pathRewrite: {
             "^/api": "",

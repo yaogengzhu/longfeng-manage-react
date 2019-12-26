@@ -32,7 +32,7 @@ class Login extends React.Component<IProps, {}> {
         const classes = this.props.classes
         return (
             <div className={['column','align-items-center',classes.loginContainer,].join(' ')}>
-                <h1 className='font-size-40 color-fff' style={{ marginTop: '200px'}}>房屋租赁管理系统</h1>
+                <h1 className='font-size-40 color-fff' style={{ marginTop: '200px'}}>博客管理系统</h1>
                 <div className='box border-radius-10'>
                     <h2 className='font-size-16 color-primary-light'>登录账号</h2>
                     <Input size='large' placeholder='请输入账号' className='margin-top-10'></Input>
@@ -64,11 +64,15 @@ class Login extends React.Component<IProps, {}> {
     }
 
     private login() {
-       $fetch.get({
-           url: '/default/index'
-       }).then( res => {
-           console.log(res)
-       })
+    //    $fetch.get({
+    //        url: '/default/index'
+    //    }).then( res => {
+    //        console.log(res)
+    //    })
+
+        axios.get('http://localhost:7002/default/index').then( res => {
+            console.log(res)
+        })
     }
 }
 

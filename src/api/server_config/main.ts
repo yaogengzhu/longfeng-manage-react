@@ -29,7 +29,7 @@ export default {
 
     repInterceptor: [function(response: AxiosResponse) {
 
-        return response.data.data
+        return response.data
     }, function(e: any) {
         console.log(e)
         // if (e.response.status === 401 || e.response.status === 403) {
