@@ -70,9 +70,9 @@ class Login extends React.Component<IProps, {}> {
     //        console.log(res)
     //    })
 
-        axios.get('http://localhost:7002/default/index').then( res => {
-            console.log(res)
-        })
+        // axios.get('http://localhost:7002/default/index').then( res => {
+        //     console.log(res)
+        // })
     }
 }
 

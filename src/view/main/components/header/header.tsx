@@ -30,7 +30,7 @@ class Header extends React.Component<IProps, {}> {
             <div className={['row', classes.headerContainer].join(' ')}>
                 <div className="logo"></div>
                 <div className='expaned row align-items-center'>
-                    <h1 className='font-size-30 font-weight-300'>房屋租赁管理系统</h1>
+                    <h1 className='font-size-30 font-weight-300'>龙风博客管理系统</h1>
                 </div>
                 <div className='person'></div>
             </div>
