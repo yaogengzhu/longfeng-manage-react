@@ -9,7 +9,7 @@ interface IProps extends WithStyles<typeof styles> {
 
 }
 
-class IndexComp extends React.Component<IProps, {}> {
+class IndexPageComp extends React.Component<IProps, {}> {
     
     public render() {
         return (
@@ -18,4 +18,4 @@ class IndexComp extends React.Component<IProps, {}> {
     }
 }
 
-export const Index = withStyle(IndexComp)
+export const IndexPage = withStyle(styles)(IndexPageComp)

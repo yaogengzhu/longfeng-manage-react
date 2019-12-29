@@ -3,7 +3,6 @@ import withStyle, {WithStyles} from 'react-jss'
 import { Layout, Menu, Icon } from 'antd'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
 const { Sider } = Layout
-const { SubMenu } = Menu
 
 const styles = {
     sliderContainer: {
@@ -39,14 +38,11 @@ class Slider extends React.Component<IProps , IState> {
                 <Layout style={{ minHeight: '100%' }}>
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                     <Menu  defaultSelectedKeys={['1']} mode="inline">
-                        <Menu.Item key="1" onClick={() => { console.log(this.props.match)}}>
-                           <Menu.Item key="4">
-                            <Icon type="home" />
+                        <Menu.Item key="1" onClick={() => { this.props.history.push({pathname: '/main/index'})}}>
+                            <Icon type="home"/>
                             <span>首页</span>
                         </Menu.Item>
-                            <span>首页</span>
-                        </Menu.Item>
-                        <Menu.Item key="2">
+                        <Menu.Item key="2" onClick={() => { this.props.history.push({pathname: '/main/articleAdmin'})}}>
                             <Icon type="appstore" />
                             <span>文章管理</span>
                         </Menu.Item>

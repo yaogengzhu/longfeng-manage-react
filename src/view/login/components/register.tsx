@@ -2,7 +2,7 @@ import React from 'react'
 import withStyle, { WithStyles } from 'react-jss'
 import DialogHeader from '../../../components/dialog-header/dialog-header'
 import { dialog } from '../../../utils/dialog'
-import { InputNumber, Input, Button } from 'antd'
+import {Input, Button } from 'antd'
 
 const styles = {
     registerContainer: {

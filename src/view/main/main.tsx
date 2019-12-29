@@ -2,7 +2,8 @@ import React from 'react'
 import Header from './components/header/header'
 import Slider from './components/slider/slider'
 import { Switch, Route, RouteComponentProps, Redirect } from 'react-router-dom'
-import { Index } from './index/index'
+import { IndexPage } from './index-page/index-page'
+import { ArticleAdmin } from './article-admin/article-admi'
 
 interface IProps {
 
@@ -21,9 +22,10 @@ class Main extends React.Component<IProps & RouteComponentProps, {}> {
                     <Slider></Slider>
                     <div className='expaned'>
                         <Switch>
-                            <Route path={ this.props.match.path + '/index'} components={ Index }></Route>
+                            <Route path={ this.props.match.path + '/index'} component={IndexPage}></Route>
+                            <Route path={ this.props.match.path + '/articleAdmin'} component={ ArticleAdmin }></Route>
                             {/* 重定向 */}
-                            {/* <Redirect to={ this.props.match.path + '/index'}  components={ Index }></Redirect> */}
+                            <Redirect to={ this.props.match.path + '/index'} ></Redirect>
                         </Switch>
                     </div>
                 </div>

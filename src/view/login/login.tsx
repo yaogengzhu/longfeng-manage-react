@@ -4,10 +4,8 @@ import { Input, Button, Checkbox} from 'antd'
 import bg from '@/assets/images/login.jpg'
 import { Iconfont } from '../../components/icon-font/icon-font'
 import { MessageType, Message } from '../../utils'
-import { $fetch } from '../../api'
 import { dialog } from '../../utils/dialog'
 import Register from './components/register'
-import axios from 'axios'
 const styles = {
     loginContainer: {
         background: `url(${bg}) center center no-repeat`,
