@@ -46,8 +46,8 @@ class Slider extends React.Component<IProps , IState> {
                             <Icon type="appstore" />
                             <span>文章管理</span>
                         </Menu.Item>
-                        <Menu.Item key="3">
-                            <Icon type="profile" />
+                        <Menu.Item key="3" onClick={() => { this.props.history.push({pathname: '/main/category'})}}>
+                            <Icon type="profile"/>
                             <span>分类管理</span>
                         </Menu.Item>
                         <Menu.Item key="4">
